@@ -12,6 +12,10 @@ huggingface-hub[torch]>=0.22
 einops
 omegaconf
 tqdm
+# Fast3R 在导入时会初始化训练/配置工具，即使推理时不训练也必须可导入。
+hydra-core
+lightning>=2.5.0
+rich
 fastapi>=0.110
 uvicorn[standard]>=0.27
 python-multipart        # FastAPI 表单 / 文件上传
